@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Calendly Clone — Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{--bg:#0f172a;--card:#111827;--muted:#334155;--prim:#22d3ee;--txt:#e5e7eb;}
+  *{box-sizing:border-box} body{margin:0;background:linear-gradient(135deg,#0b1020,#0f172a);}
+  .container{max-width:1100px;margin:0 auto;padding:28px}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+  .brand{color:var(--txt);font-weight:800;font-size:24px;letter-spacing:.5px}
+  .nav a{color:var(--txt);text-decoration:none;margin-left:16px;opacity:.85}
+  .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+  .card{background:radial-gradient(1200px 400px at 20% -10%,rgba(34,211,238,.15),transparent),var(--card);
+        border:1px solid #1f2937;border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  h1{color:var(--txt);font-size:42px;margin:0 0 10px}
+  p{color:#cbd5e1;line-height:1.6}
+  .btn{display:inline-block;background:var(--prim);color:#06202A;font-weight:800;padding:12px 18px;
+       border-radius:12px;text-decoration:none;border:0;cursor:pointer;box-shadow:0 8px 18px rgba(34,211,238,.25)}
+  .btn.secondary{background:transparent;color:var(--txt);border:1px solid #334155}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+  .feat{background:#0b1220;border:1px solid #1f2937;border-radius:16px;padding:18px;color:#cbd5e1}
+  .tag{display:inline-block;font-size:12px;border:1px solid #334155;border-radius:999px;padding:4px 10px;margin-right:6px;color:#94a3b8}
+  footer{color:#64748b;text-align:center;margin-top:28px}
+  @media(max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">⏱️ Meetly (Calendly Clone)</div>
+      <nav class="nav">
+        <a href="signup.php">Sign up</a>
+        <a href="login.php">Log in</a>
+        <a class="btn" href="signup.php">Create booking link</a>
+      </nav>
+    </header>
+ 
+    <section class="hero">
+      <div class="card">
+        <h1>Schedule meetings without the back-and-forth.</h1>
+        <p>Create a booking link, set your availability, and let guests pick a time that works for everyone.</p>
+        <div style="margin-top:16px">
+          <a class="btn" href="signup.php">Get Started</a>
+          <a class="btn secondary" href="login.php" style="margin-left:8px">Go to Dashboard</a>
+        </div>
+        <div style="margin-top:18px">
+          <span class="tag">Calendar UI</span>
+          <span class="tag">Email Confirmations</span>
+          <span class="tag">Reschedule/Cancel</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2 style="color:#e2e8f0;margin:0 0 12px">Try a Sample Booking</h2>
+        <p style="margin:0 0 14px">After you create an event, you’ll get a link like:
+          <code style="background:#0a1628;padding:2px 6px;border-radius:6px;border:1px solid #203047">schedule.php?u=yourname&event=intro-call</code>
+        </p>
+        <a class="btn" href="login.php">Create your first event</a>
+      </div>
+    </section>
+ 
+    <section class="grid">
+      <div class="feat"><h3 style="color:#e2e8f0;margin-top:0">Set Availability</h3><p>Choose your working days and time ranges. The app auto-generates bookable slots.</p></div>
+      <div class="feat"><h3 style="color:#e2e8f0;margin-top:0">Prevent Double Booking</h3><p>Slots are locked once someone books. Unique slot index protects against overlaps.</p></div>
+      <div class="feat"><h3 style="color:#e2e8f0;margin-top:0">Manage Meetings</h3><p>See upcoming/past, cancel or reschedule with a click — all from your dashboard.</p></div>
+    </section>
+ 
+    <footer>© Meetly · Built with HTML, CSS & JS + PHP for DB</footer>
+  </div>
+</body>
+</html>
+ 
